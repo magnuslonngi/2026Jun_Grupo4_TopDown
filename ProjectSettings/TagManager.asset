@@ -2,19 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player Collision
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemy Collision
+  - 'Player Hits '
+  - Enemy Hits
+  - Interactable
   - 
   - 
   - 
@@ -41,3 +41,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 1774060129
+    locked: 0
+  - name: Decoration
+    uniqueID: 943370417
+    locked: 0
+  - name: Wall
+    uniqueID: 1286183987
+    locked: 0
+  - name: Prop
+    uniqueID: 2025319181
+    locked: 0
+  - name: Character
+    uniqueID: 2171584295
+    locked: 0
+  - name: Effects
+    uniqueID: 1929277647
+    locked: 0
+  - name: UI
+    uniqueID: 48546195
+    locked: 0
+  m_RenderingLayers:
+  - Default

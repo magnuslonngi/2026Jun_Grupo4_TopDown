@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(HurtCollider))]
 public class Health : MonoBehaviour
 {
     [SerializeField] private float _healthPoints;
-
     public UnityEvent<float> OnHealthInitialize;
     public UnityEvent<float> OnHealthChange;
     public UnityEvent<float> OnHealthDeplete;

@@ -9,6 +9,20 @@ public class HitCollider : MonoBehaviour
         set { _damage = value; }
     }
 
+    private float _impulse;
+    public float Impulse
+    {
+        get { return _impulse; }
+        set { _impulse = value; }
+    }
+
+    private float _delay;
+    public float Delay
+    {
+        get { return _delay; }
+        set { _delay = value; }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         HurtCollider hurtCollider = other.GetComponent<HurtCollider>();
