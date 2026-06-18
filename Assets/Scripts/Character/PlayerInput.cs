@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterMovement), typeof(CharacterAttack))]
+[RequireComponent(typeof(CharacterMovement), typeof(CharacterAttack), typeof(PlayerInteract))]
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private InputActionReference _moveInput;
@@ -11,10 +11,13 @@ public class PlayerInput : MonoBehaviour
     private CharacterMovement _characterMovement;
     private CharacterAttack _characterAttack;
 
+    private PlayerInteract _playerInteract;
+
     private void Awake()
     {
         _characterMovement = GetComponent<CharacterMovement>();
         _characterAttack = GetComponent<CharacterAttack>();
+        _playerInteract = GetComponent<PlayerInteract>();
     }
 
     private void OnEnable()
@@ -24,6 +27,8 @@ public class PlayerInput : MonoBehaviour
 
         _attackInput.action.performed += OnAttackPerformed;
         _attackInput.action.canceled += OnAttackCanceled;
+
+        _interactInput.action.performed += OnInteractPerformed;
     }
 
     private void OnDisable()
@@ -33,6 +38,8 @@ public class PlayerInput : MonoBehaviour
 
         _attackInput.action.performed -= OnAttackPerformed;
         _attackInput.action.canceled -= OnAttackCanceled;
+
+        _interactInput.action.performed -= OnInteractPerformed;
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
@@ -48,5 +55,10 @@ public class PlayerInput : MonoBehaviour
     private void OnAttackCanceled(InputAction.CallbackContext context)
     {
         _characterAttack.AttackCanceled();
+    }
+
+    private void OnInteractPerformed(InputAction.CallbackContext context)
+    {
+        _playerInteract.InteractWithObject();
     }
 }
