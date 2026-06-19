@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SampleDialogueNoName
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   dialogues:
-  - Character: 
+  - Name: 
     Dialogue: 'I''m just a sign '
-  - Character: 
+  - Name: 
     Dialogue: 'I dont need any name '
