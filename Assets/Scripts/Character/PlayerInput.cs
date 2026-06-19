@@ -22,6 +22,16 @@ public class PlayerInput : MonoBehaviour
 
     private void OnEnable()
     {
+        EnableInput();
+    }
+
+    private void OnDisable()
+    {
+        DisableInput();
+    }
+
+    public void EnableInput()
+    {
         _moveInput.action.performed += OnMovePerformed;
         _moveInput.action.canceled += OnMovePerformed;
 
@@ -31,7 +41,7 @@ public class PlayerInput : MonoBehaviour
         _interactInput.action.performed += OnInteractPerformed;
     }
 
-    private void OnDisable()
+    public void DisableInput()
     {
         _moveInput.action.performed -= OnMovePerformed;
         _moveInput.action.canceled -= OnMovePerformed;
@@ -40,6 +50,8 @@ public class PlayerInput : MonoBehaviour
         _attackInput.action.canceled -= OnAttackCanceled;
 
         _interactInput.action.performed -= OnInteractPerformed;
+
+        _characterMovement.MoveDirection = Vector2.zero;
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)

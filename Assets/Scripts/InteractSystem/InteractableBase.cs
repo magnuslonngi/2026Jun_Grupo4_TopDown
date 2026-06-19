@@ -1,14 +1,14 @@
 using TMPro;
 using UnityEngine;
 
-public class IntaractableBase : MonoBehaviour, IInteractable
+public class InteractableBase : MonoBehaviour, IInteractable
 {
     [Header("Input")]
     [SerializeField] private string _keyString;
 
-    [Header("Display")]
+    [Header("World Display")]
     [SerializeField] protected string _interactString;
-    [SerializeField] private GameObject _canvasGameObject;
+    [SerializeField] private GameObject _worldCanvasGameObject;
     [SerializeField] private TextMeshProUGUI _textMeshProKeyText;
     [SerializeField] private TextMeshProUGUI _textMeshProInteractText;
 
@@ -20,12 +20,12 @@ public class IntaractableBase : MonoBehaviour, IInteractable
 
     public virtual void ShowText()
     {
-        _canvasGameObject.gameObject.SetActive(true);
+        _worldCanvasGameObject.gameObject.SetActive(true);
     }
 
     public virtual void HideText()
     {
-        _canvasGameObject.gameObject.SetActive(false);
+        _worldCanvasGameObject.gameObject.SetActive(false);
     }
 
     public Vector3 GetPosition()
@@ -33,5 +33,5 @@ public class IntaractableBase : MonoBehaviour, IInteractable
         return transform.position;
     }
 
-    public virtual void Interact() { }
+    public virtual void Interact(GameObject interactor) { }
 }

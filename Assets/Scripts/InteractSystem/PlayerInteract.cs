@@ -51,6 +51,6 @@ public class PlayerInteract : MonoBehaviour
 
     public void InteractWithObject()
     {
-        _closestInteractable?.Interact();
+        _closestInteractable?.Interact(gameObject);
     }
 }

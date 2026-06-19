@@ -13,6 +13,8 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField] private float _attackImpulse;
     [SerializeField] private float _attackImpulseDelay;
     [SerializeField] private float _attackDuration;
+
+    [Header("Attack Unity Events")]
     public UnityEvent OnAttackPerformed;
     public UnityEvent OnAttackFinished;
 
@@ -22,6 +24,8 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField] private float _chargedAttackImpulseDelay;
     [SerializeField] private float _chargedAttackHoldTime;
     [SerializeField] private float _chargedAttackDuration;
+
+    [Header("Charged Attack Unity Events")]
     public UnityEvent OnAttackChargeBegin;
     public UnityEvent OnAttackChargeCompleted;
     public UnityEvent OnChargedAttackPerformed;

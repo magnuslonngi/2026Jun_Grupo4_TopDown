@@ -50,9 +50,6 @@ TagManager:
   - name: Wall
     uniqueID: 1286183987
     locked: 0
-  - name: Prop
-    uniqueID: 2025319181
-    locked: 0
   - name: Character
     uniqueID: 2171584295
     locked: 0

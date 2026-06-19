@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class InteractableObject : IntaractableBase
+public class InteractableObject : InteractableBase
 {
     protected override void Start()
     {
         base.Start();
     }
 
-    public override void Interact()
+    public override void Interact(GameObject gameObject)
     {
-        Debug.Log("Interacting with: " + _interactString);
+        Debug.Log(gameObject.name + " is interacting with: " + _interactString);
     }
 }
