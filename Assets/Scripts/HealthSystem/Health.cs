@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,11 +11,14 @@ public class Health : MonoBehaviour
     public UnityEvent<float> OnHealthDeplete;
 
     private HurtCollider _hurtCollider;
+    private CharacterCollect characterCollect;
 
     private void Awake()
     {
         _hurtCollider = GetComponent<HurtCollider>();
         _hurtCollider.OnHitRecieved.AddListener(OnHitRecieved);
+        characterCollect = GetComponent<CharacterCollect>();
+        characterCollect?.onColletedObject.AddListener(onCollectedObject);
     }
 
     private void Start()
@@ -33,6 +37,17 @@ public class Health : MonoBehaviour
         {
             _healthPoints = 0;
             OnHealthDeplete?.Invoke(_healthPoints);
+        }
+    }
+
+    private void onCollectedObject(CollectableObject collectable)
+    {
+        if ((collectable.inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Health) && 
+            (collectable.inventoryInfo.usage == InventoryInfo.UsageType.OnCollect))
+        {
+            _healthPoints += collectable.inventoryInfo.recovery;
+            OnHealthChange?.Invoke(_healthPoints);
+
         }
     }
 }
