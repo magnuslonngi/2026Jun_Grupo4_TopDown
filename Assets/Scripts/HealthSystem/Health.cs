@@ -17,11 +17,21 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         _hurtCollider = GetComponent<HurtCollider>();
-        _hurtCollider.OnHitRecieved.AddListener(OnHitRecieved);
         characterCollect = GetComponent<CharacterCollect>();
-        characterCollect?.onColletedObjectDirectUsage.AddListener(onCollectedObject);
         inventory = GetComponent<Inventory>();
+    }
+
+    private void OnEnable()
+    {
+        _hurtCollider.OnHitRecieved.AddListener(OnHitRecieved);
+        characterCollect?.onColletedObjectDirectUsage.AddListener(onCollectedObject);
         inventory?.onObjectUsed.AddListener(onObjectUsed);
+    }
+    private void OnDisable()
+    {
+        _hurtCollider.OnHitRecieved.RemoveListener(OnHitRecieved);
+        characterCollect?.onColletedObjectDirectUsage.RemoveListener(onCollectedObject);
+        inventory?.onObjectUsed.RemoveListener(onObjectUsed);
     }
 
     private void Start()
