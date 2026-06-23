@@ -22,4 +22,5 @@ public class InventoryInfo : ScriptableObject
     public float recovery = 1f;
     public Sprite sprite;
     public int remainingUseCount = 3;
+    public string desc = "";
 }

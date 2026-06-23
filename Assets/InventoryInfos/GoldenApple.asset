@@ -15,3 +15,6 @@ MonoBehaviour:
   objectType: 0
   usage: 2
   recovery: 5
+  sprite: {fileID: -3337038689812066966, guid: c6d33475094bc284182df675e89d0e87, type: 3}
+  remainingUseCount: 1
+  desc: The golden apple restore more health points that the common apple

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,7 @@ public class InventoryItem : MonoBehaviour
 {
     [Header("UI Controls")]
     [SerializeField] Image image;
+    [SerializeField] TextMeshProUGUI description;
     [SerializeField] Button useButton;
     [SerializeField] Button equipButton;
     [SerializeField] Button trashButton;
@@ -34,6 +36,7 @@ public class InventoryItem : MonoBehaviour
         inventoryInfo = _inventoryInfo;
         inventory = _inventory;
         image.sprite = _inventoryInfo.sprite;
+        description.text = _inventoryInfo.desc;
     }
 
     private void OnUse()

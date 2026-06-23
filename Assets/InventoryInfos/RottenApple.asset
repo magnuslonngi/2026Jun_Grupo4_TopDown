@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: RottenApple
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
   objectType: 0
-  usage: 0
+  usage: 2
   recovery: -2
+  sprite: {fileID: 7042712667217132043, guid: c6d33475094bc284182df675e89d0e87, type: 3}
+  remainingUseCount: 1
+  desc: Rotten apple that makes you feel bad
