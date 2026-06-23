@@ -1,12 +1,18 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterMovement), typeof(CharacterAttack), typeof(PlayerInteract))]
+
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private InputActionReference _moveInput;
     [SerializeField] private InputActionReference _attackInput;
     [SerializeField] private InputActionReference _interactInput;
+    [SerializeField] private InputActionReference _inventoryInput;
+
+    public UnityEvent OnInventoryToggle;
 
     private CharacterMovement _characterMovement;
     private CharacterAttack _characterAttack;
@@ -39,6 +45,8 @@ public class PlayerInput : MonoBehaviour
         _attackInput.action.canceled += OnAttackCanceled;
 
         _interactInput.action.performed += OnInteractPerformed;
+
+        _inventoryInput.action.performed += OnInvetoryInteractPerformed;
     }
 
     public void DisableInput()
@@ -50,6 +58,8 @@ public class PlayerInput : MonoBehaviour
         _attackInput.action.canceled -= OnAttackCanceled;
 
         _interactInput.action.performed -= OnInteractPerformed;
+
+        _inventoryInput.action.performed -= OnInvetoryInteractPerformed;
 
         _characterMovement.MoveDirection = Vector2.zero;
     }
@@ -72,5 +82,10 @@ public class PlayerInput : MonoBehaviour
     private void OnInteractPerformed(InputAction.CallbackContext context)
     {
         _playerInteract.InteractWithObject();
+    }
+
+    private void OnInvetoryInteractPerformed(InputAction.CallbackContext context)
+    {
+        OnInventoryToggle?.Invoke();
     }
 }

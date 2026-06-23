@@ -14,11 +14,15 @@ public class Health : MonoBehaviour
     private CharacterCollect characterCollect;
     Inventory inventory;
 
+    private float _maxHealthPoints;
+
     private void Awake()
     {
         _hurtCollider = GetComponent<HurtCollider>();
         characterCollect = GetComponent<CharacterCollect>();
         inventory = GetComponent<Inventory>();
+
+        _maxHealthPoints = _healthPoints;
     }
 
     private void OnEnable()
@@ -70,6 +74,9 @@ public class Health : MonoBehaviour
         if (info.objectType == InventoryInfo.InventoryObjectType.Health)
         {
             _healthPoints += info.recovery;
+
+            _healthPoints = Mathf.Min(_healthPoints, _maxHealthPoints);
+
             OnHealthChange?.Invoke(_healthPoints);
 
         }
