@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: GoldenApple
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
   objectType: 0
-  recovery: 1
+  usage: 2
+  recovery: 5

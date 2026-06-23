@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
   objectType: 0
-  recovery: 1
+  usage: 0
+  recovery: 2

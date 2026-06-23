@@ -12,13 +12,16 @@ public class Health : MonoBehaviour
 
     private HurtCollider _hurtCollider;
     private CharacterCollect characterCollect;
+    Inventory inventory;
 
     private void Awake()
     {
         _hurtCollider = GetComponent<HurtCollider>();
         _hurtCollider.OnHitRecieved.AddListener(OnHitRecieved);
         characterCollect = GetComponent<CharacterCollect>();
-        characterCollect?.onColletedObject.AddListener(onCollectedObject);
+        characterCollect?.onColletedObjectDirectUsage.AddListener(onCollectedObject);
+        inventory = GetComponent<Inventory>();
+        inventory?.onObjectUsed.AddListener(onObjectUsed);
     }
 
     private void Start()
@@ -42,10 +45,21 @@ public class Health : MonoBehaviour
 
     private void onCollectedObject(CollectableObject collectable)
     {
-        if ((collectable.inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Health) && 
-            (collectable.inventoryInfo.usage == InventoryInfo.UsageType.OnCollect))
+        InventoryInfo info = collectable.inventoryInfo;
+        UseInventoryInfo(info);
+    }
+
+
+    private void onObjectUsed(InventoryInfo info)
+    {
+        UseInventoryInfo(info);
+    }
+
+    private void UseInventoryInfo(InventoryInfo info)
+    {
+        if (info.objectType == InventoryInfo.InventoryObjectType.Health)
         {
-            _healthPoints += collectable.inventoryInfo.recovery;
+            _healthPoints += info.recovery;
             OnHealthChange?.Invoke(_healthPoints);
 
         }

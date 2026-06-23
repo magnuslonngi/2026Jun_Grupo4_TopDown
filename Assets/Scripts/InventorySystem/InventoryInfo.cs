@@ -12,6 +12,7 @@ public class InventoryInfo : ScriptableObject
 
     public enum UsageType
     {
+        Direct,
         OnCollect,
         InInventory
     }
@@ -19,4 +20,6 @@ public class InventoryInfo : ScriptableObject
     public InventoryObjectType objectType;
     public UsageType usage;
     public float recovery = 1f;
+    public Sprite sprite;
+    public int remainingUseCount = 3;
 }

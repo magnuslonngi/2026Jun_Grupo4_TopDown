@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3768722448156181646}
   - component: {fileID: 7620604999900071366}
   - component: {fileID: 8467959400655933887}
+  - component: {fileID: 1313843860729081152}
   m_Layer: 5
   m_Name: InventoryItemUI
   m_TagString: Untagged
@@ -80,6 +81,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2
+--- !u!114 &1313843860729081152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481508454471034742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8cfe9fcbc3340498fdc4d5d6b9103f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
+  image: {fileID: 7137970256529995991}
+  useButton: {fileID: 2351057932874235996}
+  equipButton: {fileID: 5786071113209679008}
+  trashButton: {fileID: 3067654699764653257}
+  inventoryInfo: {fileID: 0}
 --- !u!1 &4768330427784967300
 GameObject:
   m_ObjectHideFlags: 0
