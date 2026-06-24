@@ -26,18 +26,40 @@ public class DialogueReader : InteractableBase
     private int _currentIndex;
     private GameObject _interactor;
     private Coroutine _charactersRevealRoutine;
+    private MenuManager _menuManager;
+
+    private void Awake()
+    {
+        _menuManager = FindAnyObjectByType<MenuManager>();
+    }
+
+    private void OnDisable()
+    {
+        DisableInput();
+    }
+
+    private void EnableInput()
+    {
+        _dialogueInput.action.performed += ChangeDialogue;
+    }
+
+    private void DisableInput()
+    {
+        _dialogueInput.action.performed -= ChangeDialogue;
+    }
 
     public override void Interact(GameObject interactor)
     {
         _dialogueCanvas.SetActive(true);
         _interactor = interactor;
+        _menuManager.CanPause = false;
 
         if (_interactor.TryGetComponent(out PlayerInput playerInput))
         {
             playerInput.DisableInput();
         }
 
-        _dialogueInput.action.performed += ChangeDialogue;
+        EnableInput();
         OnDialogueStart.Invoke();
 
         SetDialogue(_currentIndex);
@@ -58,10 +80,12 @@ public class DialogueReader : InteractableBase
 
             _currentIndex = 0;
             _interactor = null;
-            _dialogueInput.action.performed -= ChangeDialogue;
+            DisableInput();
 
             ResetRevealCharacters();
             OnDialogueEnd.Invoke();
+
+            _menuManager.CanPause = true;
 
             return;
         }

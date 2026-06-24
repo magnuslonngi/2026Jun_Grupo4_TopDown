@@ -22,21 +22,31 @@ public class PlayerInput : MonoBehaviour
 
     private PlayerInteract _playerInteract;
 
+    private MenuManager _menuManager;
+
     private void Awake()
     {
         _characterMovement = GetComponent<CharacterMovement>();
         _characterAttack = GetComponent<CharacterAttack>();
         _playerInteract = GetComponent<PlayerInteract>();
+
+        _menuManager = FindAnyObjectByType<MenuManager>();
     }
 
     private void OnEnable()
     {
         EnableInput();
+
+        _menuManager.OnGamePause.AddListener(DisableInput);
+        _menuManager.OnGameResume.AddListener(EnableInput);
     }
 
     private void OnDisable()
     {
         DisableInput();
+
+        _menuManager.OnGamePause.RemoveListener(DisableInput);
+        _menuManager.OnGameResume.RemoveListener(EnableInput);
     }
 
     public void EnableInput()
