@@ -1,11 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyChargerAI : MonoBehaviour
 {
     public float detectionRadius = 4.5f;
     public float loseRadius = 7f;
-    public float attackRange = 1.1f;
-    public float attackCooldown = 1.25f;
+    public float attackRange = 1.3f;
+    public float chargeTime = 1f;
+    public float restTime = 1.5f;
     public float patrolRadius = 2.5f;
 
     private CharacterMovement movement;
@@ -15,8 +17,8 @@ public class EnemyAI : MonoBehaviour
 
     private Vector2 startPosition;
     private Vector2 patrolTarget;
-    private float attackTimer;
     private bool chasing;
+    private bool isAttacking;
     private bool isDead;
 
     private void Start()
@@ -33,9 +35,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        if (isDead) return;
+        if (isDead || isAttacking) return;
 
-        attackTimer -= Time.deltaTime;
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance <= detectionRadius) chasing = true;
@@ -44,7 +45,7 @@ public class EnemyAI : MonoBehaviour
         if (chasing)
         {
             if (distance <= attackRange)
-                Attack();
+                StartCoroutine(ChargedAttack());
             else
                 MoveTowards(player.position);
         }
@@ -66,24 +67,26 @@ public class EnemyAI : MonoBehaviour
             patrolTarget = startPosition + Random.insideUnitCircle * patrolRadius;
     }
 
-    private void Attack()
+    private IEnumerator ChargedAttack()
     {
-        movement.MoveDirection = Vector2.zero;
-        if (attackTimer > 0f) return;
+        isAttacking = true;
 
         MoveTowards(player.position);
-
-        // golpe simple: se cancela enseguida para que no entre en modo carga
         attack.AttackPerformed();
-        attack.AttackCanceled();
+        movement.MoveDirection = Vector2.zero;   //se queda quieto mientras carga
 
-        attackTimer = attackCooldown;
+        yield return new WaitForSeconds(chargeTime);
+        attack.AttackCanceled();                 //suelta el ataque cargado
+
+        yield return new WaitForSeconds(restTime);
+        isAttacking = false;
     }
 
     private void Die(float remaining)
     {
         isDead = true;
         movement.MoveDirection = Vector2.zero;
+        StopAllCoroutines();
         Destroy(gameObject, 0.4f);
     }
 

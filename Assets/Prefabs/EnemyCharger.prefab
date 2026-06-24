@@ -354,7 +354,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2998773876429002193, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: EnemyCharger
       objectReference: {fileID: 0}
     - target: {fileID: 2998773876429002193, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
       propertyPath: m_Layer
@@ -371,6 +371,18 @@ PrefabInstance:
     - target: {fileID: 4959082620456405266, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411550163060127405, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
+      propertyPath: _attackDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411550163060127405, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
+      propertyPath: _chargedAttackDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411550163060127405, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
+      propertyPath: _chargedAttackHoldTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7988621267639090073, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -421,7 +433,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2998773876429002193, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4791316986856132284}
+      addedObject: {fileID: -8409131464301585703}
   m_SourcePrefab: {fileID: 100100000, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
 --- !u!4 &596996308879703851 stripped
 Transform:
@@ -433,7 +445,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2998773876429002193, guid: 053fc750d62984df38d22b4749dcb36c, type: 3}
   m_PrefabInstance: {fileID: 7392021404381365426}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4791316986856132284
+--- !u!114 &-8409131464301585703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,13 +454,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5694930091129819491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99a5f9947fdd734a8989de0dfc485ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 97d8103966dec45ad8a19eed91a3e2cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyChargerAI
   detectionRadius: 4.5
   loseRadius: 7
   attackRange: 1.1
-  attackCooldown: 1.25
+  chargeTime: 1
+  restTime: 1
   patrolRadius: 2.5
 --- !u!114 &6198683916154440993 stripped
 MonoBehaviour:
