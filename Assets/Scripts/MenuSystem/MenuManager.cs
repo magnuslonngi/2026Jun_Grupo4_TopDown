@@ -80,7 +80,7 @@ public class MenuManager : MonoBehaviour
         ShowLoseMenu();
     }
 
-    private void ShowWinMenu()
+    public void ShowWinMenu()
     {
         _winMenu?.SetActive(true);
 

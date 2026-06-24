@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248672037755265651, guid: f72222fb490d24c23920b90627144556, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6248672037755265651, guid: f72222fb490d24c23920b90627144556, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -700,10 +700,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7470e8f7ba9c449c1b2808ce1bc6540e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  _player: {fileID: 0}
   _pauseInput: {fileID: 0}
   _pauseMenu: {fileID: 0}
-  _canPause: 0
+  CanPause: 0
+  _winMenu: {fileID: 0}
+  _loseMenu: {fileID: 0}
   IsGamePaused: 0
+  OnGamePause:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameResume:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &707246383
 GameObject:
   m_ObjectHideFlags: 0
