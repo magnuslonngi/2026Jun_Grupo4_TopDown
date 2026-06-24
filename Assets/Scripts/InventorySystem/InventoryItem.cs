@@ -51,6 +51,18 @@ public class InventoryItem : MonoBehaviour
     public void OnEquip()
     {
         Debug.Log("Equiping object: " + this);
+        if (inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Weapon ||
+            inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Helmet ||
+            inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Chest ||
+            inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Pants)
+        {
+            inventory.NotifyObjectEquipped(inventoryInfo);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.LogWarning("Este objeto no es equipable.");
+        }
     }
 
     private void OnTrash()

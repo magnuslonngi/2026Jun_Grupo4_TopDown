@@ -11,6 +11,9 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private InputActionReference _attackInput;
     [SerializeField] private InputActionReference _interactInput;
     [SerializeField] private InputActionReference _inventoryInput;
+    [SerializeField] private InputActionReference _equipmentInput;
+
+    [SerializeField] private InventoryUIController _uiController;
 
     public UnityEvent OnInventoryToggle;
 
@@ -47,6 +50,7 @@ public class PlayerInput : MonoBehaviour
         _interactInput.action.performed += OnInteractPerformed;
 
         _inventoryInput.action.performed += OnInvetoryInteractPerformed;
+        _equipmentInput.action.performed += OnEquipmentInteractPerformed;
     }
 
     public void DisableInput()
@@ -60,6 +64,7 @@ public class PlayerInput : MonoBehaviour
         _interactInput.action.performed -= OnInteractPerformed;
 
         _inventoryInput.action.performed -= OnInvetoryInteractPerformed;
+        _equipmentInput.action.performed -= OnEquipmentInteractPerformed;
 
         _characterMovement.MoveDirection = Vector2.zero;
     }
@@ -86,6 +91,17 @@ public class PlayerInput : MonoBehaviour
 
     private void OnInvetoryInteractPerformed(InputAction.CallbackContext context)
     {
-        OnInventoryToggle?.Invoke();
+        if (_uiController != null)
+        {
+            _uiController.ToggleInventory();
+        }
+    }
+
+    private void OnEquipmentInteractPerformed(InputAction.CallbackContext context)
+    {
+        if (_uiController != null)
+        {
+            _uiController.ToggleEquipment();
+        }
     }
 }

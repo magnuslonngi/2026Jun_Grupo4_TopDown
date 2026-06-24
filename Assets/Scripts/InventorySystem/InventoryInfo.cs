@@ -7,7 +7,10 @@ public class InventoryInfo : ScriptableObject
     {
         Health,
         Magic,
-        Armor
+        Weapon,
+        Helmet,
+        Chest,
+        Pants
     }
 
     public enum UsageType
@@ -23,4 +26,7 @@ public class InventoryInfo : ScriptableObject
     public Sprite sprite;
     public int remainingUseCount = 3;
     public string desc = "";
+
+    public int attack = 0;
+    public int defense = 0;
 }
