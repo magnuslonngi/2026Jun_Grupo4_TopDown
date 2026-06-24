@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 024028d5bc806e244b40520987fd5b17, type: 3}
-  m_Name: RedChest
+  m_Name: Helmet
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
-  objectType: 4
+  objectType: 3
   usage: 2
   recovery: 0
-  sprite: {fileID: -5356554340811983110, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
+  sprite: {fileID: -7734207694861058885, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
-  desc: Black strong armor (10 atk - 15 def)
-  attack: 10
-  defense: 15
+  desc: Black strong helmet (10 def)
+  attack: 0
+  defense: 10
