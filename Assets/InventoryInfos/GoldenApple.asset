@@ -17,6 +17,6 @@ MonoBehaviour:
   recovery: 5
   sprite: {fileID: -6267808571184406354, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
-  desc: The golden apple restore more health points that the common apple
+  desc: The Potion restore more health points that the common apple
   attack: 0
   defense: 0
