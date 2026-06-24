@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 024028d5bc806e244b40520987fd5b17, type: 3}
-  m_Name: OrangeChest
+  m_Name: RedChest
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
   objectType: 4
   usage: 2
   recovery: 0
   sprite: {fileID: 6235791727157145887, guid: c6d33475094bc284182df675e89d0e87, type: 3}
   remainingUseCount: 1
-  desc: Orange Chest
-  attack: 5
-  defense: 10
+  desc: Red chest
+  attack: 100
+  defense: 50

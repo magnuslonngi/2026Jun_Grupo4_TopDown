@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,11 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float _healthPoints;
+    public float HealthPoints
+    {
+        get { return _healthPoints; }
+        set { _healthPoints = value; }
+    }
     public UnityEvent<float> OnHealthInitialize;
     public UnityEvent<float> OnHealthChange;
     public UnityEvent<float> OnHealthDeplete;
@@ -15,6 +21,18 @@ public class Health : MonoBehaviour
     Inventory inventory;
 
     private float _maxHealthPoints;
+    public float MaxHealthPoints
+    {
+        get { return _maxHealthPoints; }
+        set { _maxHealthPoints = value; }
+    }
+
+    private float _initialMaxHealth;
+    public float InitialMaxHealth
+    {
+        get { return _initialMaxHealth; }
+        set { _initialMaxHealth = value; }
+    }
 
     private void Awake()
     {
@@ -23,6 +41,7 @@ public class Health : MonoBehaviour
         inventory = GetComponent<Inventory>();
 
         _maxHealthPoints = _healthPoints;
+        _initialMaxHealth = _healthPoints;
     }
 
     private void OnEnable()
@@ -40,7 +59,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        OnHealthInitialize?.Invoke(_healthPoints);
+        OnHealthInitialize?.Invoke(_maxHealthPoints);
     }
 
     private void OnHitRecieved(float damage)

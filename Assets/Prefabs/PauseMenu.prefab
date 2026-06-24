@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7470e8f7ba9c449c1b2808ce1bc6540e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
-  _pauseInput: {fileID: 5402732741517559458, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _pauseInput: {fileID: 4422659241804082951, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _pauseMenu: {fileID: 2914152259930111307}
   CanPause: 1
   IsGamePaused: 0

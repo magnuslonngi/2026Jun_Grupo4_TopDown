@@ -36,4 +36,10 @@ public class CharacterCollect : MonoBehaviour
         }
 
     }
+
+    public void CollectFromEquipment(InventoryInfo inventoryInfo)
+    {
+        GameObject newItem = Instantiate(inventoryItemUIPrefab, itemsParent);
+        newItem.GetComponent<InventoryItem>().Initialize(inventory, inventoryInfo);
+    }
 }

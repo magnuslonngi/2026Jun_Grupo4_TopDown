@@ -10,6 +10,11 @@ public class CharacterAttack : MonoBehaviour
 
     [Header("Simple Attack")]
     [SerializeField] private float _attackDamage;
+    public float AttackDamage
+    {
+        get { return _attackDamage; }
+        set { _attackDamage = value; }
+    }
     [SerializeField] private float _attackImpulse;
     [SerializeField] private float _attackImpulseDelay;
     [SerializeField] private float _attackDuration;
@@ -20,6 +25,11 @@ public class CharacterAttack : MonoBehaviour
 
     [Header("Charged Attack")]
     [SerializeField] private float _chargedAttackDamage;
+    public float ChargedAttackDamage
+    {
+        get { return _chargedAttackDamage; }
+        set { _chargedAttackDamage = value; }
+    }
     [SerializeField] private float _chargedAttackImpulse;
     [SerializeField] private float _chargedAttackImpulseDelay;
     [SerializeField] private float _chargedAttackHoldTime;
@@ -38,6 +48,20 @@ public class CharacterAttack : MonoBehaviour
     private bool _isAttacking;
     private bool _isAttackCharged;
 
+    // Save initial reference for equipment change
+    private float _baseAttackDamage;
+    public float BaseAttackDamage
+    {
+        get { return _baseAttackDamage; }
+        set { _baseAttackDamage = value; }
+    }
+    private float _baseChargedAttackDamage;
+    public float BaseChargedAttackDamage
+    {
+        get { return _baseChargedAttackDamage; }
+        set { _baseChargedAttackDamage = value; }
+    }
+
     private void Awake()
     {
         _characterMovement = GetComponent<CharacterMovement>();
@@ -46,6 +70,9 @@ public class CharacterAttack : MonoBehaviour
     private void Start()
     {
         _hitCollider.gameObject.SetActive(false);
+
+        _baseAttackDamage = _attackDamage;
+        _baseChargedAttackDamage = _chargedAttackDamage;
     }
 
     public void AttackPerformed()
@@ -124,5 +151,4 @@ public class CharacterAttack : MonoBehaviour
 
         _hitCollider.gameObject.SetActive(true); 
     }
-
 }
