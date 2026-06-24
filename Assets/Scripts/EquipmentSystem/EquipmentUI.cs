@@ -50,13 +50,13 @@ public class EquipmentUI : MonoBehaviour
             slotImage.sprite = item.sprite;
             slotImage.color = Color.white;
 
-            slotText.text = slotName + ":\nAttack: " + item.attack + "\nDefense: " + item.defense;
+            slotText.text = slotName + "\nAttack: " + item.attack + "\nDefense: " + item.defense;
         }
         else
         {
             slotImage.sprite = null;
             slotImage.color = new Color(1, 1, 1, 0.2f);
-            slotText.text = slotName + ":\nAttack: 0\nDefense: 0";
+            slotText.text = slotName + "\nAttack: 0\nDefense: 0";
         }
     }
 }

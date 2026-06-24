@@ -41,6 +41,15 @@ public class InventoryItem : MonoBehaviour
 
     private void OnUse()
     {
+        if (inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Weapon ||
+            inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Helmet ||
+            inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Chest ||
+            inventoryInfo.objectType == InventoryInfo.InventoryObjectType.Pants)
+        {
+            Debug.LogWarning("Este objeto no puede utilizarse.");
+            return;
+        }
+
         Debug.Log("Using object: " + this);
         inventory.NotifyObjectUsed(inventoryInfo);
         inventoryInfo.remainingUseCount--;
