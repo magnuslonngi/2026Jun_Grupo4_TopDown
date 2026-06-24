@@ -1714,7 +1714,7 @@ GameObject:
   - component: {fileID: 631079238}
   - component: {fileID: 631079237}
   - component: {fileID: 631079236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TriggerBossStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53477,7 +53477,7 @@ GameObject:
   - component: {fileID: 1324790641}
   - component: {fileID: 1324790640}
   - component: {fileID: 1324790639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TriggerKeyStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
