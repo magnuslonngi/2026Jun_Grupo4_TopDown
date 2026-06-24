@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
   objectType: 0
   usage: 2
-  recovery: 5
+  recovery: 20
   sprite: {fileID: -6267808571184406354, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
-  desc: The Potion restore more health points that the common apple
+  desc: The potion restore more health than the apple
   attack: 0
   defense: 0

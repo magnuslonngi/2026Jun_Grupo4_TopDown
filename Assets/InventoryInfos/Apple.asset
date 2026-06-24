@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInfo
   objectType: 0
   usage: 0
-  recovery: 2
+  recovery: 5
   sprite: {fileID: -2039200767727926696, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
   desc: Simple apple that restores a few health points

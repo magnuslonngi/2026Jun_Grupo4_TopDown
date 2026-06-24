@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   dialogues:
   - Name: 
-    Dialogue: 'Use the E key to interact '
+    Dialogue: Use J to make a simple attack
+  - Name: 
+    Dialogue: Hold J to make a charged spinning attack

@@ -17,6 +17,6 @@ MonoBehaviour:
   recovery: 0
   sprite: {fileID: -5356554340811983110, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
-  desc: Red chest
-  attack: 100
-  defense: 50
+  desc: Red strong armor (10 atk - 15 def)
+  attack: 10
+  defense: 15

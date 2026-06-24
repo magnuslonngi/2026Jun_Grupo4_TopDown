@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Another Top Down In Unity
+  m_text: Another GameBoy Like game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2af4d2267273048f4932bca1704af4ff, type: 2}
   m_sharedMaterial: {fileID: -1877863458079770951, guid: 2af4d2267273048f4932bca1704af4ff, type: 2}

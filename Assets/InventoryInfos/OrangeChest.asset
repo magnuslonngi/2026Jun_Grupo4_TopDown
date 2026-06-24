@@ -17,6 +17,6 @@ MonoBehaviour:
   recovery: 0
   sprite: {fileID: -3830388580303652894, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
-  desc: Orange Chest
+  desc: Simple orange armor (5 atk - 10 def)
   attack: 5
   defense: 10
