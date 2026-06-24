@@ -15,7 +15,7 @@ MonoBehaviour:
   objectType: 4
   usage: 2
   recovery: 0
-  sprite: {fileID: 6235791727157145887, guid: c6d33475094bc284182df675e89d0e87, type: 3}
+  sprite: {fileID: -3830388580303652894, guid: 665338b6b4997074da05f29320c2f2fa, type: 3}
   remainingUseCount: 1
   desc: Red chest
   attack: 100
