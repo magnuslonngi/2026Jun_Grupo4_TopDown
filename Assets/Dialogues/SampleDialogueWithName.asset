@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   dialogues:
   - Name: Signy
-    Dialogue: 'I''m just a sign '
+    Dialogue: 'Puedes recolectar objetos al colicionar con ellos. '
   - Name: Signy
-    Dialogue: But that doesnt mean i dont have a name
+    Dialogue: Algunos objetos abren puertas al recogerlos

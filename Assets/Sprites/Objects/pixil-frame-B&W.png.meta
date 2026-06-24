@@ -143,12 +143,12 @@ TextureImporter:
       name: pixil-frame-B&W_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 47
-        width: 12
-        height: 17
+        x: 1
+        y: 48
+        width: 10
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -165,12 +165,12 @@ TextureImporter:
       name: pixil-frame-B&W_1
       rect:
         serializedVersion: 2
-        x: 13
-        y: 47
-        width: 14
-        height: 17
+        x: 14
+        y: 48
+        width: 12
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,12 +187,12 @@ TextureImporter:
       name: pixil-frame-B&W_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 32
-        width: 16
-        height: 15
+        x: 35
+        y: 50
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,12 +209,12 @@ TextureImporter:
       name: pixil-frame-B&W_3
       rect:
         serializedVersion: 2
-        x: 31
-        y: 32
-        width: 16
-        height: 15
+        x: 16
+        y: 33
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: pixil-frame-B&W_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 18
+        x: 32
+        y: 33
         width: 14
-        height: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,12 +253,12 @@ TextureImporter:
       name: pixil-frame-B&W_5
       rect:
         serializedVersion: 2
-        x: 27
-        y: 18
-        width: 14
-        height: 14
+        x: 46
+        y: 25
+        width: 10
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: pixil-frame-B&W_6
       rect:
         serializedVersion: 2
-        x: 45
-        y: 24
+        x: 14
+        y: 19
         width: 12
-        height: 11
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -297,12 +297,12 @@ TextureImporter:
       name: pixil-frame-B&W_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 15
-        height: 15
+        x: 28
+        y: 19
+        width: 12
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: pixil-frame-B&W_8
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
+        x: 1
+        y: 1
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -341,12 +341,12 @@ TextureImporter:
       name: pixil-frame-B&W_9
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 18
-        height: 18
+        x: 16
+        y: 1
+        width: 11
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,11 +359,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pixil-frame-B&W_10
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1eea7b4a0eaba4b995f30d484c8cc6
+      internalID: -1310931531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-B&W_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e1e35aa622d9948a73e33fe76c2854
+      internalID: -957722633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7ee5032842b4ea74b95f52d132a047c1
     internalID: 0
     vertices: []
     indices: 
@@ -371,10 +415,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       pixil-frame-B&W_0: -6267808571184406354
       pixil-frame-B&W_1: -2039200767727926696
+      pixil-frame-B&W_10: -1310931531
+      pixil-frame-B&W_11: -957722633
       pixil-frame-B&W_2: 5297324666592471650
       pixil-frame-B&W_3: -3830388580303652894
       pixil-frame-B&W_4: -5356554340811983110
