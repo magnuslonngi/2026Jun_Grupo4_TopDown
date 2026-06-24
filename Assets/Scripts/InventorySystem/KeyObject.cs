@@ -19,7 +19,7 @@ public class KeyObject : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(Door);
+            Door.SetActive(false);
             SFX.Play();
             sp.enabled = false;
             coll.enabled = false;
